@@ -10,18 +10,17 @@
  */
 function isArrayLengthOdd(numbers) {
   // Your code here
-  let res;
-  if (numbers.length % 2 !== 0) {
+  let result = numbers.length;
+  if (result % 2 !== 0) {
     // console.log(`The ${numbers} is: Odd`);
-    res = true;
+    return true;
   } else {
     // console.log(`The ${numbers} is: Even`);
-    res = false;
+    return false;
   }
-  console.log(`${res}`);
 }
-isArrayLengthOdd([1, 2, 3]);
-isArrayLengthOdd([1, 2, 3, 4]);
+console.log(isArrayLengthOdd([1, 2, 3]));
+console.log(isArrayLengthOdd([1, 2, 3, 4]));
 
 /**
  * isArrayLengthEven(numbers):
@@ -35,18 +34,17 @@ isArrayLengthOdd([1, 2, 3, 4]);
  */
 function isArrayLengthEven(numbers) {
   // Your code here
-  let res;
-  if (numbers.length % 2 === 0) {
+  let result = numbers.length;
+  if (result % 2 === 0) {
     // console.log(`The ${numbers} is: Even`);
-    res = true;
+    return true;
   } else {
     // console.log(`The ${numbers} is: Odd`);
-    res = false;
+    return false;
   }
-  console.log(`${res}`);
 }
-isArrayLengthEven([1, 2, 3]);
-isArrayLengthEven([1, 2, 3, 4]);
+console.log(isArrayLengthEven([1, 2, 3]));
+console.log(isArrayLengthEven([1, 2, 3, 4]));
 
 /**
  * addLailaToArray(instructors):
@@ -59,10 +57,9 @@ isArrayLengthEven([1, 2, 3, 4]);
 function addLailaToArray(instructors) {
   // Your code here
   instructors.push("Laila");
-  console.log(`${instructors}`);
+  return instructors;
 }
-let bob = ["Mshary", "Hasan"];
-addLailaToArray(bob);
+console.log(addLailaToArray(["Mshary", "Hasan"]));
 
 /**
  * eliminateTeam(teams):
@@ -75,11 +72,11 @@ addLailaToArray(bob);
 function eliminateTeam(teams) {
   // Your code here
   let lastTeam = teams.pop();
-  console.log(lastTeam);
+  return lastTeam;
 }
 let allTeams = ["Brazil", "Germany", "Italy"];
 console.log(allTeams);
-eliminateTeam(allTeams);
+console.log(eliminateTeam(allTeams));
 console.log(allTeams);
 
 /**
@@ -96,13 +93,14 @@ function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
   if (fruits.length % 2 === 0) {
     let halfFruits = fruits.slice(2, fruits.length);
-    console.log(halfFruits);
-  } else if (fruits.length % 2 !== 0) {
-    console.log([]);
+    return halfFruits;
+  } else {
+    // if fruits.length is odd
+    return [];
   }
 }
-secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]);
-secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]);
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]));
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]));
 
 
 /**
@@ -120,13 +118,13 @@ secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]);
  * - Use string method .slice()
  */
 function youGottaCalmDown(shout) {
-    // Your code here
-    let oneExclamationMark = shout.slice(0, shout.indexOf("!") + 1);
-    console.log(oneExclamationMark);
-    if (shout[shout.length - 1] !== "!") {
-        console.log(shout);
-    }
+  // Your code here
+  if (shout[shout.length - 1] !== "!") {
+    return shout;
   }
-  youGottaCalmDown("HI!!!!!!!!!!");
-  youGottaCalmDown("Taylor Schwift!!!!!!!!!!!");
-  youGottaCalmDown("Hellooooo");
+    let oneExclamationMark = shout.slice(0, shout.indexOf("!") + 1);
+    return oneExclamationMark;
+  }
+ console.log(youGottaCalmDown("HI!!!!!!!!!!"));
+ console.log(youGottaCalmDown("Taylor Schwift!!!!!!!!!!!"));
+ console.log(youGottaCalmDown("Hellooooo"));
