@@ -92,7 +92,7 @@ console.log(allTeams);
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
   if (fruits.length % 2 === 0) {
-    let halfFruits = fruits.slice(2, fruits.length);
+    let halfFruits = fruits.slice(fruits.length / 2, fruits.length);
     return halfFruits;
   } else {
     // if fruits.length is odd
@@ -100,8 +100,7 @@ function secondHalfOfArrayIfItIsEven(fruits) {
   }
 }
 console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]));
-console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]));
-
+console.log( secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry", "pear"]));
 
 /**
  * youGottaCalmDown(shout):
@@ -122,9 +121,9 @@ function youGottaCalmDown(shout) {
   if (shout[shout.length - 1] !== "!") {
     return shout;
   }
-    let oneExclamationMark = shout.slice(0, shout.indexOf("!") + 1);
-    return oneExclamationMark;
-  }
- console.log(youGottaCalmDown("HI!!!!!!!!!!"));
- console.log(youGottaCalmDown("Taylor Schwift!!!!!!!!!!!"));
- console.log(youGottaCalmDown("Hellooooo"));
+  let oneExclamationMark = shout.slice(0, shout.indexOf("!") + 1);
+  return oneExclamationMark;
+}
+console.log(youGottaCalmDown("HI!!!!!!!!!!"));
+console.log(youGottaCalmDown("Taylor Schwift!!!!!!!!!!!"));
+console.log(youGottaCalmDown("Hellooooo"));
