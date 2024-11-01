@@ -100,7 +100,15 @@ function secondHalfOfArrayIfItIsEven(fruits) {
   }
 }
 console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]));
-console.log( secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry", "pear"]));
+console.log(
+  secondHalfOfArrayIfItIsEven([
+    "apple",
+    "orange",
+    "banana",
+    "kiwi",
+    "blueberry"
+  ])
+);
 
 /**
  * youGottaCalmDown(shout):
